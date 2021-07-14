@@ -1,0 +1,44 @@
+$primary-color: #10770e;
+$secondary-color: #797977;
+
+main {
+  height: 100vh;
+  padding: 30px;
+  .container {
+    margin: 0 auto;
+    max-width: 960px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    header {
+      h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: .9em;
+        color:$primary-color;
+        margin: 10px 0 30px 0;
+      }
+
+      span {
+        text-transform: uppercase;
+        color: $secondary-color;
+      }
+
+      p {
+        display: block;
+        color: $secondary-color;
+        max-width: 460px;
+      }
+
+      form {
+        display: flex;
+        max-width: 960px;
+        margin: 30px auto;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+$primary-color: #10770e;
+$secondary-color: #0d5f0c;
+$text-color:#8b8b8b;
+
+button {
+  font-size: 1em;
+  flex: 1;
+  height: 65px;
+  border-radius:5px;
+  font-weight: 700;
+  background: $primary-color;
+  color: $text-color;
+  padding: 0 32px;
+  margin-left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  transition: background .3s;
+
+  &:hover {
+    background: $secondary-color;
+    color: #ebecf0;
+  }
+}

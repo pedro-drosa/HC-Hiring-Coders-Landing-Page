@@ -1,16 +1,13 @@
-//Color palette
-$secondary-color: #8238c2;
-$tertiary-color: #1f1c1f;
-$primary-color: #333;
-$primary-text: #fff;
-$secondary-text: #797977;
-
 //My Reset
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: #000;
 }
 
 button, a {
