@@ -18,6 +18,8 @@ main {
         font-weight: bold;
         line-height: .9em;
         color:$primary-color;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: $primary-color;
         margin: 10px 0 30px 0;
       }
 
@@ -38,6 +40,74 @@ main {
         margin: 30px auto;
         display: flex;
         justify-content: center;
+      }
+    }
+  }
+}
+
+aside {
+  background: #797977;
+  padding: 60px 30px;
+  section {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+
+    .photo {
+      flex: 2 0 360px;
+      img {
+        max-width: 100%;
+        display: block;
+      }
+    }
+
+    .photo-content {
+      margin-left: 60px;
+      h1 {
+        color: #000;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #000;
+        font-weight: bold;
+        font-size: 3rem;
+
+        &::before {
+          font-size: 1.125rem;
+          content: 'ABOUT US';
+          display: block;
+          color: $primary-color;
+          -webkit-text-stroke-width: 0;
+          -webkit-text-stroke-color:none;
+        }
+
+        &::after {
+          content: 'WITH SOLID TEAM';
+          display: block;
+          color: #797977;
+          -webkit-text-stroke-width: 2px;
+          -webkit-text-stroke-color: #000;
+        }
+      }
+
+      & p:first-of-type {
+        margin: 20px 0;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 700px) {
+  aside {
+    section {
+      flex-wrap: wrap-reverse;
+
+      .photo {
+        display: none;
+      }
+      .photo-content {
+        margin: 0 0 60px 0;
       }
     }
   }
