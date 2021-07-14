@@ -93,12 +93,48 @@ aside {
         margin: 20px 0;
         font-weight: bold;
       }
+
+      & p:last-of-type {
+        margin-bottom: 60px;
+      }
     }
   }
 }
 
+footer {
+  padding: 60px 30px;
+  background: #000;
+  display: flex;
+  justify-content: center;
 
-@media (max-width: 700px) {
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    color: $secondary-color;
+
+    #social {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+
+      a {
+        color: $secondary-color;
+        transition: background .3s;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+
+      svg {
+        font-size: 2.125rem;
+        margin: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 860px) {
   aside {
     section {
       flex-wrap: wrap-reverse;
