@@ -1,5 +1,4 @@
-import './style.scss';
-
+import {FormEvent, useState} from 'react';
 import { FiGithub, FiLinkedin, FiSlack } from 'react-icons/fi';
 
 import {Input} from '../../components/Input/Input';
@@ -8,8 +7,17 @@ import {Button} from '../../components/Button/Button';
 import backgroundImg from '../../assets/images/background.jpg'; 
 import controllImg from '../../assets/images/controll.jpg'; 
 
+import './style.scss';
 
 export function Home() {
+  const [newEmail, setNewEmail] = useState<string>('');
+
+  function handleSubmit(event: FormEvent) {
+    event.preventDefault();
+    localStorage.setItem('[HC]landingpage', newEmail);
+    setNewEmail('');
+  }
+  
   const backgroundStyle = {
     backgroundImage: `url(${backgroundImg})`,
     backgroundPosition: 'center top',
@@ -26,9 +34,14 @@ export function Home() {
           <span>The All new 518/588 DPI.</span>
           <h1>Remarkable Performance</h1>
           <p>Cadastre seu email para receber as ofertas de pré venda, e economize até 50 a 75% na Loja Xbox com descontos exclusivos.</p>
-          <form>
-            <Input type="email" placeholder="Enter your best email"/>
-            <Button type='button'>REGISTER</Button>
+          <form onSubmit={handleSubmit}>
+            <Input
+              type="email" 
+              placeholder="Enter your best email"
+              onChange= { e => setNewEmail(e.target.value)}
+              value={newEmail} 
+            />
+            <Button type='submit'>REGISTER</Button>
           </form>
         </header>
       </div>
