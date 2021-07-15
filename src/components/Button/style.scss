@@ -9,7 +9,7 @@ button {
   border-radius:5px;
   font-weight: 700;
   background: $primary-color;
-  color: $text-color;
+  color: #ebecf0;
   padding: 0 32px;
   margin-left: 5px;
   display: flex;
@@ -17,9 +17,9 @@ button {
   align-items: center;
   border: 0;
   transition: background .3s;
-
+  
   &:hover {
     background: $secondary-color;
-    color: #ebecf0;
+    color: $text-color;
   }
 }

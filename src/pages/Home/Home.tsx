@@ -27,7 +27,7 @@ export function Home() {
           <h1>Remarkable Performance</h1>
           <p>Cadastre seu email para receber as ofertas de pré venda, e economize até 50 a 75% na Loja Xbox com descontos exclusivos.</p>
           <form>
-            <Input type="email" placeholder="Digite seu melhor E-mail"/>
+            <Input type="email" placeholder="Enter your best email"/>
             <Button type='button'>REGISTER</Button>
           </form>
         </header>
