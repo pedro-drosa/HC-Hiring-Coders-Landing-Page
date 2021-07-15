@@ -73,7 +73,7 @@ aside {
 
         &::before {
           font-size: 1.125rem;
-          content: 'ABOUT US';
+          content: 'ABOUT THIS';
           display: block;
           color: $primary-color;
           -webkit-text-stroke-width: 0;
@@ -111,7 +111,7 @@ footer {
     max-width: 960px;
     margin: 0 auto;
     color: $secondary-color;
-
+    text-align: center;
     #social {
       display: flex;
       justify-content: center;

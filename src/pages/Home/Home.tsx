@@ -25,10 +25,10 @@ export function Home() {
         <header>
           <span>The All new 518/588 DPI.</span>
           <h1>Remarkable Performance</h1>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, esse quae. Reprehenderit sunt, consequatur nobis velit eveniet ratione voluptates aliquid!</p>
+          <p>Cadastre seu email para receber as ofertas de pré venda, e economize até 50 a 75% na Loja Xbox com descontos exclusivos.</p>
           <form>
             <Input type="email" placeholder="Digite seu melhor E-mail"/>
-            <Button type='button'>Cadastrar</Button>
+            <Button type='button'>REGISTER</Button>
           </form>
         </header>
       </div>
@@ -39,10 +39,10 @@ export function Home() {
           <img src={controllImg} alt="user" />
         </div>
         <div className="photo-content">
-          <h1>GET AMAZING RESULT</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm od tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-          <Button type='button'>Reservar Agora</Button>
+          <h1>GET AN AMAZING RESULT</h1>
+          <p>Xbox One Elite is the new Xbox One controller that features key customization. The joystick is visually the same as the traditional model, but it is heavier and more sensitive to the touch. </p>
+          <p>The ability to switch between analogs is one of the highlights of the accelerator, allowing the player to choose which style is best for him.</p>
+          <Button type='button'>Sign Up</Button>
         </div>
       </section>
     </aside>
@@ -65,7 +65,7 @@ export function Home() {
             </li>
           </ul>
         </nav>
-        <p>This Project is a MIT licensed. You can use it freely, respecting the terms included in the license file.</p>
+        <p>This project was created during the <a href="https://www.hiringcoders.com.br/">Hiring Coders</a> training,<br/> promoted by <a href="https://www.gama.academy/">Gama Academi</a> in partnership with <a href="https://vtex.com/br-pt/">V-Tex</a> <br/>and is under license from MIT.</p>
       </div>
     </footer>
   </>
