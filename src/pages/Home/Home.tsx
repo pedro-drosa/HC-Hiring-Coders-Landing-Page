@@ -1,4 +1,8 @@
 import {FormEvent, useState} from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+
 import { FiGithub, FiLinkedin, FiSlack } from 'react-icons/fi';
 
 import {Input} from '../../components/Input/Input';
@@ -11,9 +15,14 @@ import './style.scss';
 
 export function Home() {
   const [newEmail, setNewEmail] = useState<string>('');
-
+  
+  const notify = () => newEmail ? toast.success(`${newEmail}, registered successfully!`) : toast.error("Please, type a valid email!");
+  
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
+    if (newEmail.trim() === '') {
+      return;
+    }
     localStorage.setItem('[HC]landingpage', newEmail);
     setNewEmail('');
   }
@@ -41,7 +50,7 @@ export function Home() {
               onChange= { e => setNewEmail(e.target.value)}
               value={newEmail} 
             />
-            <Button type='submit'>REGISTER</Button>
+            <Button onClick={notify} type='submit'>REGISTER<ToastContainer/></Button>
           </form>
         </header>
       </div>
