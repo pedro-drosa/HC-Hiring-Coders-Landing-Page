@@ -15,7 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export function Home() {
   const [newEmail, setNewEmail] = useState<string>('');
-
+  const customId = 'custom-id-validate';
   
   async function formValidation(value: string): Promise<boolean> {
     const Schema = Yup.object().shape({
@@ -31,13 +31,13 @@ export function Home() {
   async function handleSubmit(event: FormEvent) {
     event.preventDefault();
     if(!(await formValidation(newEmail))) {
-      return toast.error("Please, type a valid email!");
+      return toast.error("Please, type a valid email!", { toastId: customId});
     } 
     
     localStorage.setItem('[HC]landingpage', newEmail);
     setNewEmail('');
       
-    return toast.success(`${localStorage.getItem('[HC]landingpage')}, registered successfully!`);
+    return toast.success(`${localStorage.getItem('[HC]landingpage')}, registered successfully!`,{toastId: customId});
   }
   
   const backgroundStyle = {
