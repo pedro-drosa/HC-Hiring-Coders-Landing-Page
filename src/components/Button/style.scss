@@ -17,6 +17,7 @@ $text-color:#8b8b8b;
   align-items: center;
   border: 0;
   transition: background .3s;
+  text-decoration: none;
   
   &:hover {
     background: $secondary-color;
