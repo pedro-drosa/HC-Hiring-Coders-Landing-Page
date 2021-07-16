@@ -50,9 +50,9 @@ export function Home() {
 
   return(
   <>
-    <main style={backgroundStyle}>
+    <main id="form" style={backgroundStyle}>
       <div className='container'>
-        <header>
+        <div>
           <span>The All new 518/588 DPI.</span>
           <h1>Remarkable Performance</h1>
           <p>Cadastre seu email para receber as ofertas de pré venda, e economize até 50 a 75% na Loja Xbox com descontos exclusivos.</p>
@@ -63,9 +63,9 @@ export function Home() {
               onChange= { e => setNewEmail(e.target.value)}
               value={newEmail} 
             />
-            <Button type='submit'>REGISTER<ToastContainer/></Button>
+            <Button className="button" type='submit'>REGISTER<ToastContainer/></Button>
           </form>
-        </header>
+        </div>
       </div>
     </main>
     <aside>
@@ -77,7 +77,7 @@ export function Home() {
           <h1>GET AN AMAZING RESULT</h1>
           <p>Xbox One Elite is the new Xbox One controller that features key customization. The joystick is visually the same as the traditional model, but it is heavier and more sensitive to the touch. </p>
           <p>The ability to switch between analogs is one of the highlights of the accelerator, allowing the player to choose which style is best for him.</p>
-          <Button type='button'>Sign Up</Button>
+          <a href="#form" className="button">Sign Up</a>
         </div>
       </section>
     </aside>
