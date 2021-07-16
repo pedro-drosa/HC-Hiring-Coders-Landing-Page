@@ -55,7 +55,7 @@ export function Home() {
         <div>
           <span>The All new 518/588 DPI.</span>
           <h1>Remarkable Performance</h1>
-          <p>Cadastre seu email para receber as ofertas de pré venda, e economize até 50 a 75% na Loja Xbox com descontos exclusivos.</p>
+          <p>Register your email to receive pre-sale offers, and save up to 50 to 75% at the Xbox Store with exclusive discounts.</p>
           <form onSubmit={handleSubmit}>
             <Input
               type="email" 
