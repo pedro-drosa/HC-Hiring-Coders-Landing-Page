@@ -17,6 +17,8 @@ Minha solução para o primeiro desafio.
 Este projeto foi desenvolvido durante o treinamento [Hiring Coders](https://www.hiringcoders.com.br/),
 promovido pela [Gama Academy](https://www.gama.academy/") em parceria com a [V-Tex](https://vtex.com/br-pt/).
 
+<img alt="Mockup" src="https://res.cloudinary.com/pedro-drosa/image/upload/v1626478440/lp_qgvjt4.jpg">
+
 ### Pré-requisitos
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: [Git](https://git-scm.com), [NodeJS](https://nodejs.org), [Yarn](https://classic.yarnpkg.com).
 
