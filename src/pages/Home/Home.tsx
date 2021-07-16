@@ -1,7 +1,6 @@
 import {FormEvent, useState} from 'react';
+import * as Yup from 'yup';
 import { ToastContainer, toast } from 'react-toastify';
-
-import 'react-toastify/dist/ReactToastify.css';
 
 import { FiGithub, FiLinkedin, FiSlack } from 'react-icons/fi';
 
@@ -12,19 +11,33 @@ import backgroundImg from '../../assets/images/background.jpg';
 import controllImg from '../../assets/images/controll.jpg'; 
 
 import './style.scss';
+import 'react-toastify/dist/ReactToastify.css';
 
 export function Home() {
   const [newEmail, setNewEmail] = useState<string>('');
+
   
-  const notify = () => newEmail ? toast.success(`${newEmail}, registered successfully!`) : toast.error("Please, type a valid email!");
-  
-  function handleSubmit(event: FormEvent) {
-    event.preventDefault();
-    if (newEmail.trim() === '') {
-      return;
+  async function formValidation(value: string): Promise<boolean> {
+    const Schema = Yup.object().shape({
+      email: Yup.string().email().required(),
+    })
+    
+    if(!(await Schema.isValid({ email:value }))) {
+      return false;
     }
+    return true;
+  }
+  
+  async function handleSubmit(event: FormEvent) {
+    event.preventDefault();
+    if(!(await formValidation(newEmail))) {
+      return toast.error("Please, type a valid email!");
+    } 
+    
     localStorage.setItem('[HC]landingpage', newEmail);
     setNewEmail('');
+      
+    return toast.success(`${localStorage.getItem('[HC]landingpage')}, registered successfully!`);
   }
   
   const backgroundStyle = {
@@ -50,7 +63,7 @@ export function Home() {
               onChange= { e => setNewEmail(e.target.value)}
               value={newEmail} 
             />
-            <Button onClick={notify} type='submit'>REGISTER<ToastContainer/></Button>
+            <Button type='submit'>REGISTER<ToastContainer/></Button>
           </form>
         </header>
       </div>
