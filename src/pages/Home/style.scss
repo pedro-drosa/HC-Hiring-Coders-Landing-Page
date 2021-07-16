@@ -131,6 +131,18 @@ footer {
         margin: 15px;
       }
     }
+    p {
+      a {
+        color: $secondary-color;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background .3s;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
   }
 }
 
